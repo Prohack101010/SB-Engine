@@ -16,9 +16,9 @@ import substates.NoSecretScreen1Substate;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var sbEngineVersion:String = '3.0.0';
-	public static var psychEngineVersion:String = '0.7.1h';
-	public static var fnfEngineVersion:String = '0.2.8';
+	public static var sbEngineVersion:String = '0.0.0';
+	public static var psychEngineVersion:String = '1.7.1h';
+	public static var fnfEngineVersion:String = '6.6.6';
 	public static var currentlySelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -35,10 +35,10 @@ class MainMenuState extends MusicBeatState
 	var secretText1:FlxText;
 	
 	var optionSelect:Array<String> = [
-		'story_mode',
+		//'story_mode',
 		'freeplay',
-		#if MODS_ALLOWED 'mods', #end
-		'credits',
+		//#if MODS_ALLOWED 'mods', #end
+		//'credits',
 		'options'
 	];
 
@@ -405,16 +405,16 @@ class MainMenuState extends MusicBeatState
 					var daChoice:String = optionSelect[currentlySelected];
 
 				switch (daChoice) {
-					case 'story_mode':
-						MusicBeatState.switchState(new StoryMenuState());
+					//case 'story_mode':
+						//MusicBeatState.switchState(new StoryMenuState());
 					case 'freeplay':
 						MusicBeatState.switchState(new FreeplayState());
-					#if MODS_ALLOWED
-					case 'mods':
-						MusicBeatState.switchState(new ModsMenuState());
+					//#if MODS_ALLOWED
+					//case 'mods':
+						//MusicBeatState.switchState(new ModsMenuState());
 					#end
-					case 'credits':
-						MusicBeatState.switchState(new CreditsState());
+					//case 'credits':
+						//MusicBeatState.switchState(new CreditsState());
 					case 'options':
 						MusicBeatState.switchState(new OptionsState());
 						OptionsState.onPlayState = false;
