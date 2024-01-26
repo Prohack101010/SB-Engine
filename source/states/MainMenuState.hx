@@ -412,7 +412,7 @@ class MainMenuState extends MusicBeatState
 					//#if MODS_ALLOWED
 					//case 'mods':
 						//MusicBeatState.switchState(new ModsMenuState());
-					#end
+					//#end
 					//case 'credits':
 						//MusicBeatState.switchState(new CreditsState());
 					case 'options':
